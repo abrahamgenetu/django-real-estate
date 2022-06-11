@@ -6,6 +6,9 @@ from django.conf.urls.static import static
 from real_estates.settings.base import MEDIA_ROOT
 urlpatterns = [
     path('supersecret/', admin.site.urls),
+    path('api/v1/auth/', include("djoser.urls")),
+    path('api/v1/auth/', include("djoser.urls.jwt"))
+    
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 
 admin.site.site_header = "Real Estate Admin"

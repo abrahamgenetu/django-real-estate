@@ -2,7 +2,7 @@ from pyexpat import model
 from rest_framework import serializers
 from .models import Rating
 
-class RatingSelializer(serializers.ModelSerializer):
+class RatingSerializer(serializers.ModelSerializer):
     rate_giver = serializers.SerializerMethodField(read_only= True)
     agent = serializers.SerializerMethodField(read_only=True)
 

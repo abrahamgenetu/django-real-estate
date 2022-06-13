@@ -10,27 +10,27 @@ DOMAIN = env("DOMAIN")
 SITE_NAME = "Real Estate"
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Real_estate',
-        'USER': 'abraham', #default user name
-        'PASSWORD': 'yoratorad@abraham3',
-        'HOST': '127.0.0.1', # default host
-        'PORT': '5432', # default postgres port
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': env("POSTGRES_ENGINE"),
-#         'NAME': env("POSTGRES_DB"),
-#         'USER': env("POSTGRES_USER"), #default user name
-#         'PASSWORD': env("POSTGRES_PASSWORD"),
-#         'HOST': env("PG_HOST"), # default host
-#         'PORT': env("PG_PORT"), # default postgres port
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'estate',
+#         'USER': 'abraham', #default user name
+#         'PASSWORD': 'yoratorad@abraham3',
+#         'HOST': "db", # default host
+#         'PORT': '5432', # default postgres port
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': env("POSTGRES_ENGINE"),
+        'NAME': env("POSTGRES_DB"),
+        'USER': env("POSTGRES_USER"), #default user name
+        'PASSWORD': env("POSTGRES_PASSWORD"),
+        'HOST': env("PG_HOST"), # default host
+        'PORT': env("PG_PORT"), # default postgres port
+    }
+}
 
 
 CELERY_BROKER_URL = env("CELERY_BROKER")
